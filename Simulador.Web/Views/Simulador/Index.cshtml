@@ -1,0 +1,33 @@
+﻿@model List<Simulador.BL.DTOs.OutputDTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Plan de Pago</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nro Cuota</th>
+            <th>Abono Interes</th>
+            <th>Abono Capital</th>
+            <th>Cuota</th>
+            <th>Cuota Seguro</th>
+            <th>Saldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NroCuota</td>
+                <td>@item.AbonoInteres</td>
+                <td>@item.AbonoCapital</td>
+                <td>@item.Cuota</td>
+                <td>@item.CuotaSeguro</td>
+                <td>@item.Saldo</td>
+            </tr>
+        }
+    </tbody>
+</table>
